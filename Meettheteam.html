@@ -1,0 +1,195 @@
+<!DOCTYPE html> <!--Doc type, tells the user that the type of document is HTML-->
+<html lang="en"> <!--Langauge is in english-->
+<head> <!--Start of Head-->
+<meta charset="UTF-8"> <!--Specificies the specifc coding to be used, web developers are encouraged to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!--> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Tells the browser the width length based on the device used-->
+<title> Meet the Team </title> <!-- The title of the page, which is viewed in the search bar-->
+<link rel="stylesheet" href="css/style.css"> <!--Link- links the document to another, rel- shows the page link is the style, the href provides the user with the source -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Link to google font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Link to google font-->
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet"> <!-- Link to google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">  <!-- Link to google font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <!-- Link to google font-->
+<link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">  <!-- Link to google font-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script> <!--Ensures that jquery javascript is utilised within the page -->
+</head> <!--End of head-->
+<body id="meettheteam"> <!--Start of Body-->
+
+<div class="wrapper"> <!--Div to contain the entire content of this page, allowing a CSS scroll effect to be created-->   
+<nav class="topnav"> <!--Navigation bar-->
+            <h1>  Blue Frontier </h1> <!--H1 highest heiracrchy of text-title of website-->
+            <div class="colourpicker"> <!--Div containing Colour Picker which will allow users to choose the background colour-->
+            Pick a colour <input onchange="colorSelected(this)" type="color"> <!--Input on change this tells the browser that on the change of colour use that colour, type being colour tells the browser it is a selection of colour-->
+            </div>  <!--End of colour picker Div-->
+            <ul class="dropdown"> <!--Un ordered list utilised to contain elements for dropdown for users to select colour theme, class name applied to allow it to be styled-->
+            <li> <!--List containing dropdown elements-->
+            <a href="#click" class="menu"> <!--Anchor element utilised to ensure the browser knows when the user actives the dropdown-->
+            <h2 class="menu-title">Colour Theme</h2> <!--H2 element (2nd text in heirachy) utilised to create text for the dropdown -->
+            <ul class="menu-dropdown"> <!--Unordered list containing all dropdown elements-->
+            <li id="blue" onclick="toggleThemeBlue()">Blue </li> <!--List containing Blue text, on click elements tells browser to run function which activates colour theme -->
+            <li id="purple" onclick="toggleTheme()">Purple </li> <!--List containing Purple text, on click elements tells browser to run function which activates colour theme -->
+            <li id="green" onclick="toggleThemegreen()">Green</li> <!--List containing Green text, on click elements tells browser to run function which activates colour theme -->
+            <li id="Yellow" onclick="toggleThemeyellow()">Yellow</li> <!--List containing Yellow text, on click elements tells browser to run function which activates colour theme -->
+            <li id="Pink" onclick="toggleThemepink()">Pink</li> <!--List containing Pink text, on click elements tells browser to run function which activates colour theme -->
+            </ul> <!--End of Unordered list containing all dropdown elements-->
+            </a> <!--End of anchor element-->
+            </li> <!--End of List containing dropdown elements-->
+            </ul> <!--End of Un ordered list utilised to contain elements for dropdown for users to select colour theme -->
+            <button id="zoomin-btn"><a id="zoom_in"><img src="Images/Zoom In.png" alt="Zoom In"></a></button> <!--Zoom In Button, id allows it to be styled individually, img links to incon and anchor elements allows the browser to be informed when the user has clicked the button, alt informs the user what text should be displayed if the image doesnt display-->
+            <button id="zoomout-btn"><a id="zoom_out"><img src="Images/Zoom Out.png" alt="Zoom Out"></a></button> <!--Zoom Out Button, id allows it to be styled individually, img links to incon and anchor elements allows the browser to be informed when the user has clicked the button, alt informs the user what text should be displayed if the image doesnt display-->
+            <button id="zoomreset-btn"><a id="zoom_reset"><img src="Images/Zoom Reset.png" alt="Zoom Reset"></a></button> <!--Zoom reset Button, id allows it to be styled individually, img links to incon and anchor elements allows the browser to be informed when the user has clicked the button, alt informs the user what text should be displayed if the image doesnt display-->
+            <a  href="Home.html">  <!--Anchor element containing link to home page-->
+            <button><img src="Images/home.png" alt="Homeicon" class="Icon"> <p >Home</p></button><!--Class active informs the browser this is the present page and to style the button alternatively--> <!--Button which allows users to active link-->
+            </a> <!--End of Anchor element containing link to home page-->
+            <a href="Aboutus.html">    <!--Anchor element containing link to About Us page--> 
+            <button><img src="Images/Aboutus.png" alt="Homeicon" class="Icon"><p>About Us</p> </button> <!--Button which allows users to active link-->
+            </a> <!--End of Anchor element containing link to home page-->
+            <a href="Contactus.html"> <!--Anchor element containing link to Contact Us page-->
+            <button><img src="Images/Email.png" alt="Homeicon" class="Icon"> <p>Contact Us</p></button> <!--Button which allows users to active link-->
+            </a> <!--End of Anchor element containing link to home page-->
+            <a href="Meettheteam.html">  <!--Anchor element containing link to Meet the Team page-->
+            <button class="active"><img src="Images/teamicon.png" alt="Homeicon" class="Icon"> <p> Meet the Team </p> </button><!--Class active informs the browser this is the present page and to style the button alternatively--> <!--Button which allows users to active link-->
+            </a> <!--End of Anchor element containing link to home page-->
+            <a href="OurServices.html">  <!--Anchor element containing link to Our Services page-->
+            <button><img src="Images/Icons/Coding.png" alt="Homeicon" class="Icon"> <p>Our Services</p> </button> <!--Button which allows users to active link-->
+            </a> <!--End of Anchor element containing link to home page-->
+</nav> <!--End of navigation bar-->
+
+<div class="Man1"> <!--Div containing all the elements for staff member 1-->
+<img id="man1" src="Images/Meet the Team/New Man 1 no colour.png" onmouseover="this.src='Images/Meet the Team/New Man 1.png'" onmouseout="this.src='Images/Meet the Team/New Man 1 no colour.png'"  alt="Man1"> <!--Image of staff member, src links to location of image, id allows its to be style individually, Alt tells the user what the image should be if it doesnt display-->
+<p id="text1">Jonathan Smith</p> <!--Paragraph element contating the name of the staff member -->
+<div class="middle"> <!--Div which contains content informing user of the worker's job title, class allows the positioning to be adjusted-->
+<div class="text">CEO/FOUNDER</div>  <!--Div which contains the text informing user of the worker's job title, class allows the text to be styled-->
+</div> <!--End of job title text-->
+<div class="worker">  <!--Div containing more content outlining the workers job role-->
+<p class="worker-info"> Under Jonathan’s watch, Blue Frontier has grown year on year, meeting huge financial milestones, opening new offices, and rapidly expanding the team. He actively promotes the personal growth of staff and takes special care to ensure everyone has plenty of opportunities and feels valued.</p> <!--Paragraph element containing text of workers role-->
+</div> <!--End of Info Div-->
+</div> <!--End of Man 1 div-->
+
+<div class="Lady1"> <!--Div containing all the elements for staff member 3-->
+<img id="lady1" src="Images/Meet the Team/New Lady 1 no colour.png" onmouseover="this.src='Images/Meet the Team/New Lady 1.png'" onmouseout="this.src='Images/Meet the Team/New Lady 1 no colour.png'" alt="lady1"/>  <!--Image of staff member, src links to location of image, id allows its to be style individually, Alt tells the user what the image should be if it doesnt display-->
+<p id="text2">Rebecca Johnson</p> <!--Paragraph element contating the name of the staff member -->
+<div class="middle"> <!--Div which contains content informing user of the worker's job title, class allows the positioning to be adjusted-->
+<div class="text">Coding Director</div> <!--Div which contains the text informing user of the worker's job title, class allows the text to be styled-->
+</div> <!--End of job title text-->
+<div class="worker"> <!--Div containing more content outlining the workers job role-->
+<p class="worker-info"> Rebecca joined Blue Frontier in 2018 as a web designer and has specialised in development over the years. Development is at the heart of her job, but she enjoys combining her skillset with her creativity to produce memorable, user focused experiences that elevate the final product.</p> <!--Paragraph element containing text of workers role-->
+</div> <!--End of job title text-->
+</div> <!--End of div-->
+
+<div class="Lady2">  <!--Div containing all the elements for staff member 3-->
+<img id="lady2" src="Images/Meet the Team/New Lady 2.png" onmouseover="this.src='Images/Meet the Team/New Lady 2 colour.png'" onmouseout="this.src='Images/Meet the Team/New Lady 2.png'" alt="lady2"> <!--Image of staff member, src links to location of image, id allows its to be style individually, Alt tells the user what the image should be if it doesnt display-->
+<p id="text3">Jenny Williams</p> <!--Paragraph element contating the name of the staff member -->
+<div class="middle">  <!--Div which contains content informing user of the worker's job title, class allows the positioning to be adjusted-->
+<div class="text">Social Media Manager</div> <!--Div which contains the text informing user of the worker's job title, class allows the text to be styled-->
+</div> <!--End of job title text-->
+<div class="worker"> <!--Div containing more content outlining the workers job role-->
+<p class="worker-info">Jenny joined Blue Frontier in 2015, and since then has continued to play a pivotal role in shaping the services offered by the digital department. As the Senior Marketing Manager,Jenny is responsible for managing a variety of social media and digital marketing contracts.</p>  <!--Paragraph element containing text of workers role-->
+</div> <!--End of job title text-->
+</div> <!--End of div-->
+
+<div class="Lady3">  <!--Div containing all the elements for staff member 4-->
+<img id="lady3" src="Images/Meet the Team/New Lady 3.png" onmouseover="this.src='Images/Meet the Team/New Lady 3 colour.png'" onmouseout="this.src='Images/Meet the Team/New Lady 3.png'"  alt="lady3">  <!--Image of staff member, src links to location of image, id allows its to be style individually, Alt tells the user what the image should be if it doesnt display-->
+<p id="text4"> Sophie Jones</p>  <!--Paragraph element contating the name of the staff member -->
+<div class="middle"> <!--Div which contains content informing user of the worker's job title, class allows the positioning to be adjusted-->
+<div class="text">Branding Executive</div> <!--Div which contains the text informing user of the worker's job title, class allows the text to be styled-->
+</div> <!--End of job title text-->
+<div class="worker"> <!--Div containing more content outlining the workers job role-->
+<p class="worker-info">Sophie joined the branding team at Blue Frontier in 2019 and holds several prestigious marketing qualifications, including two from the Chartered Institute of Marketing and a first-class degree in BA (Hons) Marketing Communications.</p> <!--Paragraph element containing text of workers role--> 
+</div> <!--End of job title text-->
+</div> <!--End of div-->
+
+<div class="Man2">  <!--Div containing all the elements for staff member 4-->
+<img id="Man2" src="Images/Meet the Team/New Man 2.png" onmouseover="this.src='Images/Meet the Team/New Man 2 colour.png'" onmouseout="this.src='Images/Meet the Team/New Man 2.png'" alt="man2">  <!--Image of staff member, src links to location of image, id allows its to be style individually, Alt tells the user what the image should be if it doesnt display-->
+<p id="text5"> Robert Jackson</p>  <!--Paragraph element contating the name of the staff member -->
+<div class="middle"> <!--Div which contains content informing user of the worker's job title, class allows the positioning to be adjusted-->
+<div class="text">Business Management Director</div> <!--Div which contains the text informing user of the worker's job title, class allows the text to be styled-->
+</div> <!--End of job title text-->
+<div class="worker"> <!--Div containing more content outlining the workers job role-->
+<p class="worker-info">Robert started Blue Frontier in 2005, along with his business partner. His career has always revolved around data, including databases, integration and data systems architecture, which remain core areas of his expertise and work.</p><!--Paragraph element containing text of workers role-->
+</div> <!--End of job title text-->
+</div> <!--End of div-->
+
+<div class="Lady4">  <!--Div containing all the elements for staff member 4-->
+<img id="Lady4" src="Images/Meet the Team/New Lady 4.png" onmouseover="this.src='Images/Meet the Team/New Lady 4 colour.png'" onmouseout="this.src='Images/Meet the Team/New Lady 4.png'" alt="Lady4">  <!--Image of staff member, src links to location of image, id allows its to be style individually, Alt tells the user what the image should be if it doesnt display-->
+<p id="text6"> Lucy Wilson</p>  <!--Paragraph element contating the name of the staff member -->
+<div class="middle"> <!--Div which contains content informing user of the worker's job title, class allows the positioning to be adjusted-->
+<div class="text">Social Media Co-oridinator</div> <!--Div which contains the text informing user of the worker's job title, class allows the text to be styled-->
+</div> <!--End of job title text-->
+<div class="worker"> <!--Div containing more content outlining the workers job role-->
+<p class="worker-info">Lucy joined the digital marketing team in 2021, working predominantly in social media and content marketing. With a passion for organic social media, content writing, strategy and digital PR, Lucy’s strength lies in combining creative ideas with strategic thinking. </p> <!--Paragraph element containing text of workers role-->
+</div> <!--End of job title text-->
+</div> <!--End of div-->
+
+<footer id="footerMTT"> <!--Footeer containing text-->
+info@BlueFrontier.com
+<p> <!--Paragraph element-->
+Copyright 2024 ©bluefrontier-all rights reserved
+</p> <!--End of paragraph element-->
+</footer> <!--End of footer-->
+
+<script> //Script area containing all relevant javascript for this page//
+    function colorSelected (element) { //Function which activates the colour picker and tells the browser to change the background colour when a colour is selected//
+    document.body.style.background = element.value
+    } //document.body.style.background tells the browser what to element change//
+    function toggleTheme() {  //Function which alters the colour theme to purple when the user selects it//
+    localStorage.setItem ("css","Purple"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Purple.css');  // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    } 
+    function toggleThemeBlue() { //Function which alters the colour theme to default when the user selects it//
+    localStorage.setItem ("css","style"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/style.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    } 
+    function toggleThemegreen() { //Function which alters the colour theme to Green when the user selects it//
+    localStorage.setItem ("css","Green"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Green.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    }
+    function toggleThemepink() { //Function which alters the colour theme to Pink when the user selects it//
+    localStorage.setItem ("css","Pink"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Pink.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    }   
+    function toggleThemeyellow() { //Function which alters the colour theme to Yellow when the user selects it//
+    localStorage.setItem ("css","Yellow"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Yellow.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    }
+    let theme = localStorage.getItem ("css"); //let called theme telling browser to collect all css files//
+    if(theme){ //If has a value then below will occur //
+    var themeLink = document.getElementsByTagName('link')[0]; //Variable tells browser to look for any items with the tage name 'link'
+    themeLink.setAttribute('href', 'css/' + theme + '.css');  //Set attribute tells browser to set the css file that is relevant to the current theme selected//
+    }   
+    jQuery(document).ready(function($) //jquery containing zoom buttons functions//
+    {
+    var zoom_level=100; // Set initial zoom level so there is a value to work with//
+    // Click events//
+    $('#zoom_in').click(function() { zoom_page(10, $(this)) }); //Zoom in event tells the browser to up the valaue by 10 when clicked//
+    $('#zoom_out').click(function() { zoom_page(-10, $(this)) }); //Zoom in event tells the browser to reduce the valaue by -10 when clicked//
+    $('#zoom_reset').click(function() { zoom_page(0, $(this)) }); //Zoom in event tells the browser to reset the value when clicked//
+    function zoom_page(step, trigger) // Function which ativate zoom action//
+    {
+    if(zoom_level>=120 && step>0 || zoom_level<=80 && step<0) return; // Informs browsers of relevant steps in and out//
+    // Set / reset zoom
+    if(step==0) zoom_level=100; //If no step value is present the zoom value is 100 (default)//
+    else zoom_level=zoom_level+step; //Else add or remove a step//
+    $('body').css({ // Set page zoom via CSS
+    transform: 'scale('+(zoom_level/100)+')', // sets zoom level//
+    transformOrigin: '50% 0' // set transform scale base so browser is aware//
+    });
+    // Adjust page to zoom width//
+    if(zoom_level>100) $('body').css({ width: (zoom_level*1.2)+'%' }); //If the zoom levels is above 100 (default increase zoom level of css by 1.2)
+    else $('body').css({ width: '100%' }); //Else keep the css page with to 100%//
+    // Activate / deactivate trigger//
+    if(zoom_level>=120 || zoom_level<=80) trigger.addClass('disabled'); //If zoom level is more or equal to 120 the trigger class should be dsiabled//
+    else trigger.parents('ul').find('.disabled').removeClass('disabled'); //Else find the the class dsiabled and remove that class//
+    if(zoom_level!=100) $('#zoom_reset').removeClass('disabled'); //If zoom level is reset remove the class disabled//
+    else $('#zoom_reset').addClass('disabled'); //Else add the class disabled//
+    }
+    });
+</script> <!--End of script-->
+
+</body> <!--End of body- end of content for that page-->
+</html> <!--End of HTML coding-->

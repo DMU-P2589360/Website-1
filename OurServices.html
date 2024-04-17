@@ -1,0 +1,168 @@
+<!DOCTYPE html> <!--Doc type, tells the user that the type of document is HTML-->
+<html lang="en"> <!--Langauge is in english-->
+<head> <!--Start of Head-->
+<meta charset="UTF-8"> <!--Specificies the specifc coding to be used, web developers are encouraged to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!--> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Tells the browser the width length based on the device used-->
+<title>Our Services</title> <!-- The title of the page, which is viewed in the search bar-->
+<link rel="stylesheet" href="css/style.css"> <!--Link- links the document to another, rel- shows the page link is the style, the href provides the user with the source -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Link to google font-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Link to google font-->
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet"> <!-- Link to google font-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head> <!--End of head-->
+<body> <!--Start of body, which contains all elements of webpage-->
+
+<div class="wrapper"> <!--Div to contain the entire content of this page, allowing a CSS scroll effect to be created-->   
+<nav class="topnav"> <!--Navigation bar-->
+        <h1>  Blue Frontier </h1> <!--H1 highest heiracrchy of text-title of website-->
+        <div class="colourpicker"> <!--Div containing Colour Picker which will allow users to choose the background colour-->
+        Pick a colour <input onchange="colorSelected(this)" type="color"> <!--Input on change this tells the browser that on the change of colour use that colour, type being colour tells the browser it is a selection of colour-->
+        </div>  <!--End of colour picker Div-->
+        <ul class="dropdown"> <!--Un ordered list utilised to contain elements for dropdown for users to select colour theme, class name applied to allow it to be styled-->
+        <li> <!--List containing dropdown elements-->
+        <a href="#click" class="menu"> <!--Anchor element utilised to ensure the browser knows when the user actives the dropdown-->
+        <h2 class="menu-title">Colour Theme</h2> <!--H2 element (2nd text in heirachy) utilised to create text for the dropdown -->
+        <ul class="menu-dropdown"> <!--Unordered list containing all dropdown elements-->
+        <li id="blue" onclick="toggleThemeBlue()">Blue </li> <!--List containing Blue text, on click elements tells browser to run function which activates colour theme -->
+        <li id="purple" onclick="toggleTheme()">Purple </li> <!--List containing Purple text, on click elements tells browser to run function which activates colour theme -->
+        <li id="green" onclick="toggleThemegreen()">Green</li> <!--List containing Green text, on click elements tells browser to run function which activates colour theme -->
+        <li id="Yellow" onclick="toggleThemeyellow()">Yellow</li> <!--List containing Yellow text, on click elements tells browser to run function which activates colour theme -->
+        <li id="Pink" onclick="toggleThemepink()">Pink</li> <!--List containing Pink text, on click elements tells browser to run function which activates colour theme -->
+        </ul> <!--End of Unordered list containing all dropdown elements-->
+        </a> <!--End of anchor element-->
+        </li> <!--End of List containing dropdown elements-->
+        </ul> <!--End of Un ordered list utilised to contain elements for dropdown for users to select colour theme -->
+        <button id="zoomin-btn"><a id="zoom_in"><img src="Images/Zoom In.png" alt="Zoom In"></a></button> <!--Zoom In Button, id allows it to be styled individually, img links to incon and anchor elements allows the browser to be informed when the user has clicked the button, alt informs the user what text should be displayed if the image doesnt display-->
+        <button id="zoomout-btn"><a id="zoom_out"><img src="Images/Zoom Out.png" alt="Zoom Out"></a></button> <!--Zoom Out Button, id allows it to be styled individually, img links to incon and anchor elements allows the browser to be informed when the user has clicked the button, alt informs the user what text should be displayed if the image doesnt display-->
+        <button id="zoomreset-btn"><a id="zoom_reset"><img src="Images/Zoom Reset.png" alt="Zoom Reset"></a></button> <!--Zoom reset Button, id allows it to be styled individually, img links to incon and anchor elements allows the browser to be informed when the user has clicked the button, alt informs the user what text should be displayed if the image doesnt display-->
+        <a  href="Home.html">  <!--Anchor element containing link to home page-->
+        <button><img src="Images/home.png" alt="Homeicon" class="Icon"> <p >Home</p></button><!--Class active informs the browser this is the present page and to style the button alternatively--> <!--Button which allows users to active link-->
+        </a> <!--End of Anchor element containing link to home page-->
+        <a href="Aboutus.html">    <!--Anchor element containing link to About Us page--> 
+        <button><img src="Images/Aboutus.png" alt="Homeicon" class="Icon"><p>About Us</p> </button> <!--Button which allows users to active link-->
+        </a> <!--End of Anchor element containing link to home page-->
+        <a href="Contactus.html"> <!--Anchor element containing link to Contact Us page-->
+        <button><img src="Images/Email.png" alt="Homeicon" class="Icon"> <p>Contact Us</p></button> <!--Button which allows users to active link-->
+        </a> <!--End of Anchor element containing link to home page-->
+        <a href="Meettheteam.html">  <!--Anchor element containing link to Meet the Team page-->
+        <button><img src="Images/teamicon.png" alt="Homeicon" class="Icon"> <p> Meet the Team </p> </button><!--Class active informs the browser this is the present page and to style the button alternatively--> <!--Button which allows users to active link-->
+        </a> <!--End of Anchor element containing link to home page-->
+        <a href="OurServices.html">  <!--Anchor element containing link to Our Services page-->
+        <button class="active"><img src="Images/Icons/Coding.png" alt="Homeicon" class="Icon"> <p>Our Services</p> </button> <!--Class active informs the browser this is the present page and to style the button alternatively--> <!--Button which allows users to active link-->
+        </a> <!--End of Anchor element containing link to home page-->
+</nav> <!--End of navigation bar-->
+
+<header> <!--Div containing main image-->
+<img id="computer2" src="Images/Our Services.jpg" alt="Man"> <!--Image element-src tells the browser where the image is located, alt given so that if the image doesnt load the user is aware what the image should be-->
+</header> <!--End of Div-->
+
+<header class="socialmedia"> <!--Div containing Icon image-->
+<a href="#socialmedia"><img src="Images/Icons/noun-social-media-5751943.png" alt="Social Media"> <!--Image element-src tells the browser where the image is located, alt given so that if the image doesnt load the user is aware what the image should be--></a>
+<p id="SocialMediaService"> Social Media </p> <!--Paragraph giving text to visusl of icon-->
+</header> <!--End of Header-->
+<header class="brand"> <!--Div containing Icon image-->
+<a href="#branddevelopment"><img src="Images/Icons/noun-brand-development-3527490.png" alt="brand development"> <!--Image element-src tells the browser where the image is located, alt given so that if the image doesnt load the user is aware what the image should be--></a>
+<p id="SocialMediaService"> Brand Development </p> <!--Paragraph giving text to visusl of icon-->
+</header> <!--End of Header-->
+<header class="coding"> <!--Div containing Icon image-->
+<a href="#coding"><img src="Images/Icons/Coding.png" alt="coding"> <!--Image element-src tells the browser where the image is located, alt given so that if the image doesnt load the user is aware what the image should be--></a>
+<p id="SocialMediaService"> Coding </p> <!--Paragraph giving text to visual of icon-->
+</header> <!--End of Header-->
+
+<div id="socialmedia"> <!--Div containing social media content-->
+<img src="Images/Social Media service.jpg" alt="Social Media"> <!--Image displaying social media service, alt tells users what should be displayed-->
+<a id="arrowicon" href="#zoomin-btn"><img src="Images/Icons/Arrow.png" alt="Arrow Icon"></a> <!--Anchor element containing, arrow icon to allow users to return to top of page-->
+</div> <!--End of div-->
+
+<div id="branddevelopment">
+<img src="Images/brand development.jpg" alt="Brand Development"> <!--Image displaying Brand Development service, alt tells users what should be displayed-->
+<a id="arrowicon2" href="#zoomin-btn"><img src="Images/Icons/Arrow.png" alt=""></a> <!--Anchor element containing, arrow icon to allow users to return to top of page-->
+</div> <!--End of div-->
+
+<div id="coding">
+<img src="Images/coding.jpg" alt="Coding"> <!--Image displaying Coding service, alt tells users what should be displayed-->
+<a id="arrowicon3" href="#zoomin-btn"><img src="Images/Icons/Arrow.png" alt=""></a> <!--Anchor element containing, arrow icon to allow users to return to top of page-->
+</div> <!--End of div-->
+
+<footer id="footerourservices"> <!--Footeer containing text-->
+info@BlueFrontier.com
+<p> <!--Paragraph element-->
+Copyright 2024 ©bluefrontier-all rights reserved
+</p> <!--End of paragraph element-->
+</footer> <!--End of footer-->
+
+<script> //Script area containing all relevant javascript for this page//
+//Javascript for a smooth scroll to additional images//
+document.querySelectorAll('a[href^="#"]').forEach(anchor => { //Query selectors which collects all href element//
+anchor.addEventListener('click', function (e) { //Event listener to tell browser to do it on click//
+e.preventDefault(); //Prevents default//
+document.querySelector(this.getAttribute('href')).scrollIntoView({ //Scroll into view to ensure correct element after scroll is visible to users//
+behavior: 'smooth' //Behaviour smooth ensures the effect is smooth//
+});
+});
+});
+    function colorSelected (element) { //Function which activates the colour picker and tells the browser to change the background colour when a colour is selected//
+    document.body.style.background = element.value
+    } //document.body.style.background tells the browser what to element change//
+    function toggleTheme() {  //Function which alters the colour theme to purple when the user selects it//
+    localStorage.setItem ("css","Purple"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Purple.css');  // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    } 
+    function toggleThemeBlue() { //Function which alters the colour theme to default when the user selects it//
+    localStorage.setItem ("css","style"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/style.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    } 
+    function toggleThemegreen() { //Function which alters the colour theme to Green when the user selects it//
+    localStorage.setItem ("css","Green"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Green.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    }
+    function toggleThemepink() { //Function which alters the colour theme to Pink when the user selects it//
+    localStorage.setItem ("css","Pink"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Pink.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    }   
+    function toggleThemeyellow() { //Function which alters the colour theme to Yellow when the user selects it//
+    localStorage.setItem ("css","Yellow"); //Local storage utilised to store users choice, set item tells the browser which element to store//
+    var theme = document.getElementsByTagName('link')[0]; //Variable theme created telling browser to select all elements with the tag name 'link' to the value of 0//
+    theme.setAttribute('href', 'css/Yellow.css'); // theme.setAttribute informs the browser to change the value of href attribute to alternative css sheet//
+    }
+    let theme = localStorage.getItem ("css"); //let called theme telling browser to collect all css files//
+    if(theme){ //If has a value then below will occur //
+    var themeLink = document.getElementsByTagName('link')[0]; //Variable tells browser to look for any items with the tage name 'link'
+    themeLink.setAttribute('href', 'css/' + theme + '.css');  //Set attribute tells browser to set the css file that is relevant to the current theme selected//
+    }   
+    jQuery(document).ready(function($) //jquery containing zoom buttons functions//
+    {
+    var zoom_level=100; // Set initial zoom level so there is a value to work with//
+    // Click events//
+    $('#zoom_in').click(function() { zoom_page(10, $(this)) }); //Zoom in event tells the browser to up the valaue by 10 when clicked//
+    $('#zoom_out').click(function() { zoom_page(-10, $(this)) }); //Zoom in event tells the browser to reduce the valaue by -10 when clicked//
+    $('#zoom_reset').click(function() { zoom_page(0, $(this)) }); //Zoom in event tells the browser to reset the value when clicked//
+    function zoom_page(step, trigger) // Function which ativate zoom action//
+    {
+    if(zoom_level>=120 && step>0 || zoom_level<=80 && step<0) return; // Informs browsers of relevant steps in and out//
+    // Set / reset zoom
+    if(step==0) zoom_level=100; //If no step value is present the zoom value is 100 (default)//
+    else zoom_level=zoom_level+step; //Else add or remove a step//
+    $('body').css({ // Set page zoom via CSS
+    transform: 'scale('+(zoom_level/100)+')', // sets zoom level//
+    transformOrigin: '50% 0' // set transform scale base so browser is aware//
+    });
+    // Adjust page to zoom width//
+    if(zoom_level>100) $('body').css({ width: (zoom_level*1.2)+'%' }); //If the zoom levels is above 100 (default increase zoom level of css by 1.2)
+    else $('body').css({ width: '100%' }); //Else keep the css page with to 100%//
+    // Activate / deactivate trigger//
+    if(zoom_level>=120 || zoom_level<=80) trigger.addClass('disabled'); //If zoom level is more or equal to 120 the trigger class should be dsiabled//
+    else trigger.parents('ul').find('.disabled').removeClass('disabled'); //Else find the the class dsiabled and remove that class//
+    if(zoom_level!=100) $('#zoom_reset').removeClass('disabled'); //If zoom level is reset remove the class disabled//
+    else $('#zoom_reset').addClass('disabled'); //Else add the class disabled//
+    }
+    });
+</script> <!--End of script-->
+   
+</div>
+</body> <!--End of Body-->
+</html> <!--End of HTML coding-->
